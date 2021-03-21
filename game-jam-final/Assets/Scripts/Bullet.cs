@@ -17,6 +17,12 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        Debug.Log(hitInfo.name);
+        Destroy(gameObject);
+        Destroy(hitInfo.gameObject);
+    }
+
+
 }
-    // Update is called once per frame
-    //
